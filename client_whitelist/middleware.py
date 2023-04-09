@@ -25,7 +25,7 @@ class ClientWhitelistMiddleware:
         # Check if request is for a protected endpoint
         if any(request.path.startswith(endpoint) for endpoint in PROTECTED_ENDPOINTS):
             # Check if all client hosts are allowed
-            if ALLOWED_CLIENT_HOSTS == ['*']:
+            if '*' in ALLOWED_CLIENT_HOSTS:
                 print('\033[92m' + formatted_date, "Allowed request from:", client_host + '\033[0m')
                 return self.get_response(request)
             # Check if client host is in the allowed list
@@ -36,3 +36,4 @@ class ClientWhitelistMiddleware:
         # If request is not for a protected endpoint or client is allowed, continue with request
         print('\033[92m' + formatted_date, "Allowed request from:", client_host + '\033[0m')
         return self.get_response(request)
+
