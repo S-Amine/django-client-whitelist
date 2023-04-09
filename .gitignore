@@ -1,0 +1,45 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+build/
+dist/
+eggs/
+src/*.egg-info/
+htmlcov/
+.coverage
+.tox/
+.cache
+pip-wheel-metadata/
+*.egg
+
+# Unit test / coverage reports
+htmlcov/
+.coverage
+.coverage.*
+.cache/
+
+# Local development settings
+*.log
+*.pot
+*.pyo
+*.orig
+*.swp
+local_settings.py
+db.sqlite3
+
+# Static files
+staticfiles/
+media/
+
+# Ignore .DS_Store (Mac) and Thumbs.db (Windows)
+.DS_Store
+Thumbs.db
+
